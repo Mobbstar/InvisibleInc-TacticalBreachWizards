@@ -1,0 +1,85 @@
+<Build name="dr_tony_face.fla">
+  <Symbol name="ear_front">
+    <Frame framenum="0" duration="1" image="ear_front-0-1" w="196" h="288" x="-0.3495026" y="0.00050354" />
+  </Symbol>
+  <Symbol name="hair_frnt">
+    <Frame framenum="0" duration="1" image="hair_frnt-0-1" w="120" h="88" x="0.02550125" y="0.0004997253" />
+  </Symbol>
+  <Symbol name="brow1">
+    <Frame framenum="0" duration="1" image="brow1-0-1" w="80" h="36" x="0.0004997253" y="0.0004997253" />
+  </Symbol>
+  <Symbol name="hat_front">
+    <Frame framenum="0" duration="1" image="hat_front-0-1" w="156" h="168" x="-0.02449799" y="-0.02449799" />
+  </Symbol>
+  <Symbol name="nose">
+    <Frame framenum="0" duration="1" image="nose-0-1" w="72" h="108" x="0.0004997253" y="0.0004997253" />
+  </Symbol>
+  <Symbol name="brow_2">
+    <Frame framenum="0" duration="1" image="brow_2-0-1" w="56" h="28" x="0.02549934" y="-0.02449989" />
+  </Symbol>
+  <Symbol name="eye_2">
+    <Frame framenum="0" duration="1" image="eye_2-0-1" w="52" h="60" x="0.0004997253" y="-0.02449989" />
+    <Frame framenum="1" duration="1" image="eye_2-1-1" w="52" h="60" x="0.0004997253" y="-0.02449989" />
+    <Frame framenum="2" duration="1" image="eye_2-2-1" w="52" h="60" x="0.0004997253" y="-0.02449989" />
+    <Frame framenum="3" duration="1" image="eye_2-3-1" w="52" h="60" x="0.0004997253" y="-0.02449989" />
+    <Frame framenum="4" duration="1" image="eye_2-3-1" w="52" h="60" x="0.0004997253" y="-0.02449989" />
+    <Frame framenum="5" duration="1" image="eye_2-2-1" w="52" h="60" x="0.0004997253" y="-0.02449989" />
+    <Frame framenum="6" duration="1" image="eye_2-1-1" w="52" h="60" x="0.0004997253" y="-0.02449989" />
+    <Frame framenum="7" duration="1" image="eye_2-0-1" w="52" h="60" x="0.0004997253" y="-0.02449989" />
+  </Symbol>
+  <Symbol name="eye_1">
+    <Frame framenum="0" duration="1" image="eye_1-0-1" w="80" h="66" x="0.0004997253" y="0.9754982" />
+    <Frame framenum="1" duration="1" image="eye_1-1-1" w="80" h="66" x="0.0004997253" y="0.9754982" />
+    <Frame framenum="2" duration="1" image="eye_1-2-1" w="80" h="66" x="0.0004997253" y="0.9754982" />
+    <Frame framenum="3" duration="1" image="eye_1-3-1" w="80" h="66" x="0.0004997253" y="0.9754982" />
+    <Frame framenum="4" duration="1" image="eye_1-3-1" w="80" h="66" x="0.0004997253" y="0.9754982" />
+    <Frame framenum="5" duration="1" image="eye_1-2-1" w="80" h="66" x="0.0004997253" y="0.9754982" />
+    <Frame framenum="6" duration="1" image="eye_1-1-1" w="80" h="66" x="0.0004997253" y="0.9754982" />
+    <Frame framenum="7" duration="1" image="eye_1-0-1" w="80" h="66" x="0.0004997253" y="0.9754982" />
+  </Symbol>
+  <Symbol name="pupil">
+    <Frame framenum="0" duration="1" image="pupil-0-1" w="36" h="32" x="0.0004997253" y="0.0004997253" />
+  </Symbol>
+  <Symbol name="mouth">
+    <Frame framenum="0" duration="1" image="mouth-0-1" w="104" h="84" x="0.0004997253" y="0.0004997253" />
+  </Symbol>
+  <Symbol name="pupil2">
+    <Frame framenum="0" duration="1" image="pupil2-0-1" w="32" h="28" x="0.0004997253" y="-0.02449989" />
+  </Symbol>
+  <Symbol name="hair_back">
+    <Frame framenum="0" duration="1" image="hair_back-0-1" w="184" h="104" x="0.02549744" y="0.0004997253" />
+  </Symbol>
+  <Symbol name="chin">
+    <Frame framenum="0" duration="1" image="chin-0-1" w="180" h="152" x="-0.02449799" y="0.02549744" />
+  </Symbol>
+  <Symbol name="eye_white">
+    <Frame framenum="0" duration="1" image="eye_white-0-1" w="64" h="48" x="0.0004997253" y="-0.02449989" />
+  </Symbol>
+  <Symbol name="eye_white_2">
+    <Frame framenum="0" duration="1" image="eye_white_2-0-1" w="40" h="48" x="0.02549934" y="0.0004997253" />
+  </Symbol>
+  <Symbol name="head">
+    <Frame framenum="0" duration="1" image="head-0-1" w="200" h="196" x="-0.02449799" y="-0.02449799" />
+  </Symbol>
+  <Symbol name="brace">
+    <Frame framenum="0" duration="1" image="brace-0-1" w="96" h="58" x="-0.0245018" y="0.9755001" />
+  </Symbol>
+  <Symbol name="ear_back">
+    <Frame framenum="0" duration="1" image="ear_back-0-1" w="176" h="296" x="0.02549744" y="0.00050354" />
+  </Symbol>
+  <Symbol name="hat">
+    <Frame framenum="0" duration="1" image="hat-0-1" w="196" h="156" x="0.00050354" y="-0.02449799" />
+  </Symbol>
+  <Symbol name="collar">
+    <Frame framenum="0" duration="1" image="collar-0-1" w="228" h="140" x="-0.07450104" y="0.00050354" />
+  </Symbol>
+  <Symbol name="tie">
+    <Frame framenum="0" duration="1" image="tie-0-1" w="120" h="308" x="0.0004997253" y="0.02549744" />
+  </Symbol>
+  <Symbol name="chest">
+    <Frame framenum="0" duration="1" image="chest-0-1" w="532" h="280" x="-0.1245117" y="0.3504944" />
+  </Symbol>
+  <Symbol name="neck">
+    <Frame framenum="0" duration="1" image="neck-0-1" w="188" h="392" x="-2.599503" y="0.02549744" />
+  </Symbol>
+</Build>

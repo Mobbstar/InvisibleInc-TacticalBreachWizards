@@ -1,0 +1,5 @@
+name = Tactical Breach Wizards
+author = Mobbstar
+version = 0.1
+icon = gui/icons/modicon_tacticalbreachwizards.png
+workshop = 

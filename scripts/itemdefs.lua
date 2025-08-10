@@ -1,0 +1,153 @@
+local util = include("modules/util")
+local commondefs = include("sim/unitdefs/commondefs")
+-- local simdefs = include( "sim/simdefs" )
+
+local function upgradeParamsUsesLeft(self, unit)
+    return {traits = {usesLeft = unit:getTraits().usesLeft}}
+end
+
+local function upgradeParamsAmmo(self, unit)
+    return {traits = {ammo = unit:getTraits().ammo}}
+end
+
+local tool_templates = {
+    tbw_item_chainbolt = util.extend(commondefs.weapon_template) {
+        name =  STRINGS.TACTICALBREACHWIZARDS.ITEMS.CHAINBOLT,
+        desc = STRINGS.TACTICALBREACHWIZARDS.ITEMS.CHAINBOLT_TIP,
+        flavor = STRINGS.TACTICALBREACHWIZARDS.ITEMS.CHAINBOLT_FLAVOR,
+        icon = "itemrigs/FloorProp_AmmoClip.png",
+        profile_icon = "gui/icons/item_icons/items_icon_small/icon-item_magazine_small.png",
+        profile_icon_100 = "gui/icons/item_icons/icon-item_magazine.png",
+        traits = {},
+        abilities = {"carryable"},
+        -- restrictedUse = {{agentID = "tbw_jen", name = STRINGS.TACTICALBREACHWIZARDS.JEN.NAME}},
+        value = 0,
+    },
+    tbw_item_galenade = util.extend(commondefs.item_template) {
+        name =  STRINGS.TACTICALBREACHWIZARDS.ITEMS.GALENADE,
+        desc = STRINGS.TACTICALBREACHWIZARDS.ITEMS.GALENADE_TIP,
+        flavor = STRINGS.TACTICALBREACHWIZARDS.ITEMS.GALENADE_FLAVOR,
+        icon = "itemrigs/FloorProp_AmmoClip.png",
+        profile_icon = "gui/icons/item_icons/items_icon_small/icon-item_magazine_small.png",
+        profile_icon_100 = "gui/icons/item_icons/icon-item_magazine.png",
+        traits = {usesCharges = true, charges = 1, chargesMax = 1},
+        abilities = {"carryable", "recharge"},
+        value = 0,
+    },
+    tbw_item_gary = util.extend(commondefs.item_template) {
+        name =  STRINGS.TACTICALBREACHWIZARDS.ITEMS.GARYSKULL,
+        desc = STRINGS.TACTICALBREACHWIZARDS.ITEMS.GARYSKULL_TIP,
+        flavor = STRINGS.TACTICALBREACHWIZARDS.ITEMS.GARYSKULL_FLAVOR,
+        icon = "itemrigs/FloorProp_AmmoClip.png",
+        profile_icon = "gui/icons/item_icons/items_icon_small/icon-item_magazine_small.png",
+        profile_icon_100 = "gui/icons/item_icons/icon-item_magazine.png",
+        traits = {},
+        abilities = {"carryable"},
+        restrictedUse = {{agentID = "tbw_dessa", name = STRINGS.TACTICALBREACHWIZARDS.DESSA.NAME}},
+        value = 0,
+    },
+    tbw_item_deathskey = util.extend(commondefs.item_template) {
+        name =  STRINGS.TACTICALBREACHWIZARDS.ITEMS.DEATHSKEY,
+        desc = STRINGS.TACTICALBREACHWIZARDS.ITEMS.DEATHSKEY_TIP,
+        flavor = STRINGS.TACTICALBREACHWIZARDS.ITEMS.DEATHSKEY_FLAVOR,
+        icon = "itemrigs/FloorProp_AmmoClip.png",
+        profile_icon = "gui/icons/item_icons/items_icon_small/icon-item_magazine_small.png",
+        profile_icon_100 = "gui/icons/item_icons/icon-item_magazine.png",
+        traits = {usesCharges = true, charges = 2, chargesMax = 2},
+        abilities = {"carryable"},
+        value = 0,
+    },
+    tbw_item_riotshield = util.extend(commondefs.item_template) {
+        name =  STRINGS.TACTICALBREACHWIZARDS.ITEMS.RIOTSHIELD,
+        desc = STRINGS.TACTICALBREACHWIZARDS.ITEMS.RIOTSHIELD_TIP,
+        flavor = STRINGS.TACTICALBREACHWIZARDS.ITEMS.RIOTSHIELD_FLAVOR,
+        icon = "itemrigs/FloorProp_AmmoClip.png",
+        profile_icon = "gui/icons/item_icons/items_icon_small/icon-item_magazine_small.png",
+        profile_icon_100 = "gui/icons/item_icons/icon-item_magazine.png",
+        traits = {},
+        abilities = {"carryable", "riotshield"},
+        restrictedUse = {{agentID = "tbw_dall", name = STRINGS.TACTICALBREACHWIZARDS.DALL.NAME}},
+        value = 0,
+    },
+    tbw_item_riotblock = util.extend(commondefs.item_template) {
+        name =  STRINGS.TACTICALBREACHWIZARDS.ITEMS.RIOTBLOCK,
+        desc = STRINGS.TACTICALBREACHWIZARDS.ITEMS.RIOTBLOCK_TIP,
+        flavor = STRINGS.TACTICALBREACHWIZARDS.ITEMS.RIOTBLOCK_FLAVOR,
+        icon = "itemrigs/FloorProp_AmmoClip.png",
+        profile_icon = "gui/icons/item_icons/items_icon_small/icon-item_magazine_small.png",
+        profile_icon_100 = "gui/icons/item_icons/icon-item_magazine.png",
+        traits = {cooldown = 0, cooldownMax = 1},
+        abilities = {"carryable"},
+        value = 0,
+    },
+    tbw_item_tazerriot = util.extend(commondefs.melee_template) {
+        name =  STRINGS.TACTICALBREACHWIZARDS.ITEMS.CENSER,
+        desc = STRINGS.TACTICALBREACHWIZARDS.ITEMS.CENSER_TIP,
+        flavor = STRINGS.TACTICALBREACHWIZARDS.ITEMS.CENSER_FLAVOR,
+        icon = "itemrigs/FloorProp_AmmoClip.png",
+        profile_icon = "gui/icons/item_icons/items_icon_small/icon-item_tazer_small.png",
+        profile_icon_100 = "gui/icons/item_icons/icon-item_tazer.png",
+        traits = {damage = 3, cooldown = 0, cooldownMax = 4, melee = true, tazer = true},
+        value = 500,
+    },
+    tbw_item_brittledart = util.extend(commondefs.weapon_template) {
+        name =  STRINGS.TACTICALBREACHWIZARDS.ITEMS.BRITTLEDART,
+        desc = STRINGS.TACTICALBREACHWIZARDS.ITEMS.BRITTLEDART_TIP,
+        flavor = STRINGS.TACTICALBREACHWIZARDS.ITEMS.BRITTLEDART_FLAVOR,
+        icon = "itemrigs/FloorProp_AmmoClip.png",
+        profile_icon = "gui/icons/item_icons/items_icon_small/icon-item_magazine_small.png",
+        profile_icon_100 = "gui/icons/item_icons/icon-item_magazine.png",
+        equipped_icon = "gui/items/equipped_pistol.png",
+        traits = {weaponType = "pistol", baseDamage = 0, pwrCost = 1, noTargetAlert = true, ignoreArmor = true, nopwr_guards = {}, doNotInterruptMove = true},
+		sounds = {shoot="SpySociety/Weapons/Precise/shoot_dart", reload="SpySociety/Weapons/LowBore/reload_handgun", use="SpySociety/Actions/item_pickup"},
+		weapon_anim = "kanim_precise_revolver",
+		agent_anim = "anims_1h",
+        value = 0,
+    },
+    tbw_item_rabidbite = util.extend(commondefs.melee_template) {
+        name =  STRINGS.TACTICALBREACHWIZARDS.ITEMS.RABIDBITE,
+        desc = STRINGS.TACTICALBREACHWIZARDS.ITEMS.RABIDBITE_TIP,
+        flavor = STRINGS.TACTICALBREACHWIZARDS.ITEMS.RABIDBITE_FLAVOR,
+        icon = "itemrigs/FloorProp_AmmoClip.png",
+        profile_icon = "gui/icons/item_icons/items_icon_small/icon-item_magazine_small.png",
+        profile_icon_100 = "gui/icons/item_icons/icon-item_magazine.png",
+        traits = {melee = true, ammo = 1, maxAmmo = 1},
+        abilities = {"carryable"},
+        restrictedUse = {{agentID = "tbw_rion", name = STRINGS.TACTICALBREACHWIZARDS.RION.NAME}},
+        value = 0,
+    },
+    tbw_augment_predictivebolt = util.extend(commondefs.augment_template) {
+        name = STRINGS.TACTICALBREACHWIZARDS.ITEMS.PREDICTIVEBOLT,
+        desc = STRINGS.TACTICALBREACHWIZARDS.ITEMS.PREDICTIVEBOLT_TIP,
+        flavor = STRINGS.TACTICALBREACHWIZARDS.ITEMS.PREDICTIVEBOLT_FLAVOR,
+        traits = {installed = true}, 
+        profile_icon = "gui/icons/item_icons/items_icon_small/icon-item_generic_torso_small.png",
+        profile_icon_100 = "gui/icons/item_icons/icon-item_generic_torso.png",
+    },
+    tbw_augment_falseprophet = util.extend(commondefs.augment_template) {
+        name = STRINGS.TACTICALBREACHWIZARDS.ITEMS.FALSEPROPHET,
+        desc = STRINGS.TACTICALBREACHWIZARDS.ITEMS.FALSEPROPHET_TIP,
+        flavor = STRINGS.TACTICALBREACHWIZARDS.ITEMS.FALSEPROPHET_FLAVOR,
+        traits = {installed = true, addAbilities = "tbw_falseprophet"}, 
+        profile_icon = "gui/icons/item_icons/items_icon_small/icon-item_generic_torso_small.png",
+        profile_icon_100 = "gui/icons/item_icons/icon-item_generic_torso.png",
+    },
+    tbw_augment_swap = util.extend(commondefs.augment_template) {
+        name = STRINGS.TACTICALBREACHWIZARDS.ITEMS.RIOTSWAP,
+        desc = STRINGS.TACTICALBREACHWIZARDS.ITEMS.RIOTSWAP_TIP,
+        flavor = STRINGS.TACTICALBREACHWIZARDS.ITEMS.RIOTSWAP_FLAVOR,
+        traits = {installed = true, pwrCost = 6, addAbilities = "tbw_swap"}, 
+        profile_icon = "gui/icons/item_icons/items_icon_small/icon-item_generic_torso_small.png",
+        profile_icon_100 = "gui/icons/item_icons/icon-item_generic_torso.png",
+    },
+    tbw_augment_resurrect = util.extend(commondefs.augment_template) {
+        name = STRINGS.TACTICALBREACHWIZARDS.ITEMS.RESURRECTION,
+        desc = STRINGS.TACTICALBREACHWIZARDS.ITEMS.RESURRECTION_TIP,
+        flavor = STRINGS.TACTICALBREACHWIZARDS.ITEMS.RESURRECTION_FLAVOR,
+        traits = {installed = true}, 
+        profile_icon = "gui/icons/item_icons/items_icon_small/icon-item_generic_torso_small.png",
+        profile_icon_100 = "gui/icons/item_icons/icon-item_generic_torso.png",
+    },
+}
+
+return tool_templates
