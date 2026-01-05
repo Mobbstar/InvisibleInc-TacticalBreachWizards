@@ -16,17 +16,17 @@ Adds %s (Archive) to rescueable agents.]],
 
 ITEMS = {
     CHAINBOLT = "Chain Bolt",
-    CHAINBOLT_TIP = "Deals 1 knockback. If target impacts an obstacle, deals 1 KO instead. Can aim at up to three targets.",
+    CHAINBOLT_TIP = "Can shoot up to three targets. Deals 1 knockback. If target impacts an obstacle, deals 1 KO instead.", -- affected by piercing scanner &c
     CHAINBOLT_FLAVOR = "A guided projectile actively calibrates the blast force to ricochet towards additional targets.",
     GALENADE = "Gale Grenade",
     GALENADE_TIP = "Deals 1 knockback to surrounding units. If unit impacts an obstacle, deals 1 KO instead.",
     GALENADE_FLAVOR = "Intended for crowd control, but ultimately discontinued because their less-than-lethal force rendered them ineffective.",
     RIOTSHIELD = "Riot Shield",
-    RIOTSHIELD_TIP = "Dashes to target. Deals 1 knockback and increases with dash distance. If unit impacts an obstacle, deals remaining knockback as KO minus Armor.",
+    RIOTSHIELD_TIP = "Dashes to target. Deals 1 knockback and increases with dash distance. If unit impacts an obstacle, deals remaining knockback (minus Armor) as KO.",
     RIOTSHIELD_FLAVOR = "Despite the name, this device is tailored towards offense and cannot stop modern plasma projectiles.",
     RIOTBLOCK = "Riot Block",
     RIOTBLOCK_TIP = "Throwable obstacle. Can be disassembled by guards.",
-    RIOTBLOCK_FLAVOR = ".",
+    RIOTBLOCK_FLAVOR = "Only certified guards and subnet users know how to manipulate these.",
     CENSER = "Censer",
     CENSER_TIP = "Melee range",
     CENSER_FLAVOR = "Dall overcharges her neural disrupter to make each hit count.",
@@ -34,7 +34,7 @@ ITEMS = {
     RIOTSWAP_TIP = "Teleports the user to a target person, and the target to the user position.",
     RIOTSWAP_FLAVOR = "Technically, this transporter puts its anchor into a third space before moving the target to the original location.",
     PREDICTIVEBOLT = "Predictive Shot",
-    PREDICTIVEBOLT_TIP = "Observing costs no AP. Overwatch gains +2 KO and +1 Armor Piercing.",
+    PREDICTIVEBOLT_TIP = "Can focus Overwatch on a particular line, with +2 KO and +1 Armor Piercing.",
     PREDICTIVEBOLT_FLAVOR = ".",
     FALSEPROPHET = "False Prophet",
     FALSEPROPHET_TIP = "Creates a unit that vanishes next turn or when shot. Has no inventory. Acts otherwise normal.",
@@ -42,7 +42,7 @@ ITEMS = {
     BRITTLEDART = "Brittling D.A.R.T.",
     BRITTLEDART_TIP = "Lowers target's Armor by 1 until next turn.",
     BRITTLEDART_FLAVOR = "The integrity of most personel armors can be temporarily compromised with the right choice of corrosive agent.",
-    RABIDBITE = "Rabid Bite", -- TODO restyle as melee augment?
+    RABIDBITE = "Rabid Bite",
     RABIDBITE_TIP = "Target becomes alerted and hostile to everyone. Other guards can kill target regardless of Armor.", -- afflicted guard either moves last, or moves first but shouts (=immmediately gets overwatched by other guards)
     RABIDBITE_FLAVOR = "Transmissible engineered diseases are outlawed citing risk of global economic damage. Nontransmissible ones are expensive, but theoretically legal.",
     DEATHSKEY = "Death's Key",
@@ -52,8 +52,8 @@ ITEMS = {
     RESURRECTION_TIP = "Requires lethal weapon. Heals injured agent or revives guard corpse. Revived guards have no Armor and are hostile to everyone.",
     RESURRECTION_FLAVOR = "This is not how cauterization works. This has no reason to work as well as medgel.",
     GARYSKULL = "Gary",
-    GARYSKULL_TIP = ".",
-    GARYSKULL_FLAVOR = "Not to be confused with the other skull, who carries a different curse.",
+    GARYSKULL_TIP = "Hits targets in a line. Targets get knocked out at start of next turn.",
+    GARYSKULL_FLAVOR = "Not to be confused with Nigel, who carries a different curse.",
 },
 
 REASON = {
@@ -111,7 +111,7 @@ JEN = {
 
     TRANSISTOR = {
         NAME = "Floodfill()",
-        DESC = "Put an agent in front of a guard exit and spend 2 AP to target any other guard exit.",
+        DESC = "Put an agent in front of a guard exit and spend 2 AP to go to any other guard exit.",
         SHORT_DESC = "Teleport using guard exits",
         ACTIVE_DESC = "TELEPORT USING GUARD ELEVATORS",
     },
@@ -150,7 +150,7 @@ ZAN = {
 
     TRANSISTOR = {
         NAME = "Preview()",
-        DESC = "While no major actions have been taken this turn, Rewind is free and goes to end of last turn.",
+        DESC = "While no actions have been taken this turn, Rewind is free and goes to end of last turn.",
         SHORT_DESC = "Can undo enemy turn",
         ACTIVE_DESC = "CAN UNDO ENEMY TURN",
     },
@@ -200,7 +200,7 @@ DALL = {
     FULLNAME = "Dall Sabin",
     FILE = "FILE #00-083275A-49828697",
     YEARS_OF_SERVICE = "1",
-    HOMETOWN = "Kalan",
+    HOMETOWN = "Mandana",
     RESCUED = "TODO need a rescue line to not crash.",
     BIO_SPOKEN = "", -- unused (unless we hire Veena again)
 

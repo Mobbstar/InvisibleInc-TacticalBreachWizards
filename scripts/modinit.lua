@@ -114,8 +114,8 @@ local function load(modApi, options, params, mod_options)
 
     include(scriptPath .. "/banter")( modApi )
 
-    for _, ability in ipairs({"falseprophet","riotshield","riotswap"}) do
-        modApi:addAbilityDef(ability, scriptPath .. "/abilities/" .. ability)
+    for _, ability in ipairs({"chainbolt","falseprophet","lineoverwatch","riotshield","riotswap"}) do
+        modApi:addAbilityDef("tbw_".. ability, scriptPath .. "/abilities/" .. ability)
     end
 
     if modApi.addTransistorDef then -- Transistor pt2

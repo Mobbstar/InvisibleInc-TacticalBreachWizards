@@ -107,7 +107,7 @@ return {
     },
     {
         onfile = util.extend(makeBaseAgent("dessa", false, false)) {
-            upgrades = {"tbw_augment_resurrect", "tbw_item_gary", "item_paralyzer"} -- TODO depending on how gary and resurrect end up working, may need a dart gun instead of paralyzer
+            upgrades = {"tbw_augment_resurrect", "tbw_item_gary", "item_paralyzer"}
         },
         archive = util.extend(makeBaseAgent("dessa", false, true)) {
             upgrades = {"tbw_item_deathskey", "item_tazer"}
