@@ -36,6 +36,21 @@ local tool_templates = {
         abilities = {"carryable", "recharge"},
         value = 0,
     },
+	tbw_item_rifle_zan = util.extend( commondefs.weapon_reloadable_template )
+	{
+		name = STRINGS.ITEMS.RIFLE_ZAN,
+		desc = STRINGS.ITEMS.RIFLE_ZAN_TOOLTIP,
+		flavor = STRINGS.ITEMS.RIFLE_ZAN_FLAVOR,
+		icon = "itemrigs/FloorProp_Rifle.png",		
+		profile_icon = "gui/icons/item_icons/items_icon_small/icon-item_gun_rifle_small.png",	
+		profile_icon_100 = "gui/icons/item_icons/icon-item_gun_rifle.png",			
+		equipped_icon = "gui/items/equipped_rifle.png",
+		traits = {weaponType="rifle", baseDamage = 1, ammo = 2, maxAmmo = 2},
+		sounds = {shoot="SpySociety/Weapons/Precise/shoot_rifle_silenced", reload="SpySociety/Weapons/Precise/reload_rifle", use="SpySociety/Actions/item_pickup",shell="SpySociety/Weapons/Shells/shell_rifle_wood"},
+		weapon_anim = "kanim_light_rifle",
+		agent_anim = "anims_2h",
+		value = 500,
+	},
     tbw_item_gary = util.extend(commondefs.item_template) {
         name =  STRINGS.TACTICALBREACHWIZARDS.ITEMS.GARYSKULL,
         desc = STRINGS.TACTICALBREACHWIZARDS.ITEMS.GARYSKULL_TIP,
@@ -45,7 +60,7 @@ local tool_templates = {
         profile_icon_100 = "gui/icons/item_icons/icon-item_magazine.png",
         traits = {baseDamage = 1, ignoreArmor = true},
         abilities = {"carryable"},
-        restrictedUse = {{agentID = "tbw_dessa", name = STRINGS.TACTICALBREACHWIZARDS.DESSA.NAME}},
+        -- restrictedUse = {{agentID = "tbw_dessa", name = STRINGS.TACTICALBREACHWIZARDS.DESSA.NAME}},
         value = 0,
     },
     tbw_item_deathskey = util.extend(commondefs.item_template) {

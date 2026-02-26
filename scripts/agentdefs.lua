@@ -97,7 +97,7 @@ return {
     },
     {
         onfile = util.extend(makeBaseAgent("zan", true, false)) {
-            upgrades = {"tbw_augment_predictivebolt", "item_light_pistol_dam", "item_tazer"},
+            upgrades = {"tbw_augment_predictivebolt", "tbw_item_rifle_zan", "item_tazer"},
             traits = {marksmanSkill = 2}
         },
         archive = util.extend(makeBaseAgent("zan", true, true)) {
