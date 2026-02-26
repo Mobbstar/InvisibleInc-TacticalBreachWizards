@@ -11,6 +11,12 @@ local function earlyInit(modApi)
         "Sim Constructor",
         "Function Library"
     }
+
+    if STRINGS.alpha_voice then -- Talkative Agents
+        for k,v in pairs(STRINGS.TACTICALBREACHWIZARDS.BARKS) do
+            STRINGS.alpha_voice.AGENT_ONELINERS[k] = v
+        end
+    end
 end
 
 local function init(modApi)
@@ -134,6 +140,7 @@ local function initStrings(modApi)
     local dataPath = modApi:getDataPath()
     local scriptPath = modApi:getScriptPath()
     local strings = include(scriptPath .. "/strings")
+    strings.BARKS = include(scriptPath .. "/barks")
     modApi:addStrings(dataPath, "TACTICALBREACHWIZARDS", strings)
 end
 
